@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>变色</title>
+		<style>
+			.div1 {
+				width: 200px;
+				height: 200px;
+				background: pink;
+				float: left;
+				margin-right: 10px;
+			}
+			.div2 {
+				width: 200px;
+				height: 200px;
+				background: red;
+				float: left;
+				margin-right: 10px;
+			}
+			#outer {
+				margin: 0 auto;
+				width: 630px;
+				height: 200px;
+			}
+			#btn {
+				margin: 0 auto 30px;
+				width: 100px;
+				height: 22px;
+				display: block;
+			}
+		</style>
+		<script>
+			window.onload = function ()
+			{
+				var oBtn = document.getElementsByTagName('input');
+				var oDiv = document.getElementById('outer').getElementsByTagName('div');
+				
+				oBtn[0].onclick = function (){
+					for(i=0; i<=oDiv.length; i++){
+					
+							oDiv[i].className="div1";
+					}
+				}
+				oBtn[1].onclick = function (){
+					for(i=0; i<=oDiv.length; i++){
+					
+							oDiv[i].className="div2";
+					}
+				}
+				
+					
+					
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input id="btn" type="button" value="change pink"/>
+		<input id="btn" type="button" value="change red"/>
+		<div id="outer">
+			<div class="div1"></div>
+			<div class="div1"></div>
+			<div class="div1"></div>
+		</div>
+		
+	</body>
+	
+</html>

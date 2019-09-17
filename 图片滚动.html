@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background: black;
+			}
+			#out {
+				width: 293px;
+				height: 220px;
+				background: white;
+				padding: 5px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#out img {
+				display: block;
+			}
+			#out #ul1 li {
+				width: 13px;
+				height: 15px;
+				line-height: 15px;
+				text-align: center;
+				font-size: 10px;
+				list-style: none;
+				display: inline-block;
+				background: #eee;
+				border-radius: 100%;
+				margin-right: 3px;
+			}
+			#ul1 {
+				position: absolute;
+				right: 5px;
+				bottom: 10px;
+			}
+		</style>
+		<script>
+			window.onload = function ()
+			{
+				var oLi = document.getElementById('ul1')
+								  .getElementsByTagName('li');
+				var oImg =document.getElementById('iner')
+								  .getElementsByTagName('img')[0];
+				var imgArr = ['img/图片滚动/1.jpg','img/图片滚动/2.jpg','img/图片滚动/3.jpg','img/图片滚动/4.jpg','img/图片滚动/5.jpg'];
+				
+				for(i=0; i<oLi.length; i++)
+				{
+					oLi[i].index = i;
+					oLi[i].onmousemove = function ()
+					{
+						oImg[0].src = imgArr[this.index];
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="out">
+			<div id="iner">
+				<img src="img/图片滚动/1.jpg"/>
+			</div>
+			<ul id="ul1">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+	</body>
+</html>

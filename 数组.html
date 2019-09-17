@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组</title>
+		<script>
+			function Preson (name,age)
+			{
+				//构造一个叫Preson的函数
+				this.name=name;
+				this.age=age;
+			};
+			Preson.prototype.toString = function ()
+			{
+				/*
+				 * 1.更改函数的输出样式
+				 * 2.this是指向创建的对象里面
+				 */
+				return "Preson[name="+this.name+",age="+this.age+"]";
+			};
+			
+			var pre1 = new Preson("张三",8);
+			var pre2 = new Preson("李四",25);
+			var pre3 = new Preson("王五",18);
+			var pre4 = new Preson("小红",24);
+			var pre5 = new Preson("小兰",20);
+			var pre6 = new Preson("路人",16);
+			
+			var preArr=[pre1,pre2,pre3,pre4,pre5,pre6];
+			
+			function preAge (arr)
+			{	
+				var newArr = [];
+				for(i=0; i<preArr.length; i++)
+				{
+					//将数组遍历一遍
+					var p = preArr[i];
+					
+					//判断数组里面的元素的属性值是否>=18
+					if(p.age >= 18)
+					{
+						newArr.push(p);
+					}
+					
+				} 
+				return newArr;
+			}
+			var result = preAge(preArr);
+			console.log(result);
+			</script>
+	</head>
+	<body>
+	</body>
+</html>

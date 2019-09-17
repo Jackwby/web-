@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>输入法</title>
+		<style>
+			div,ul,li,a,body {
+				padding: 0;
+				margin: 0;
+			}
+			div {
+				text-align: center;
+			}
+			div ul li {
+				width: 50px;
+				margin: 0 auto;
+				list-style: none;
+				border: 1px solid pink;
+				
+			}
+			#div-ul {
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload = function ()
+			{
+				var oInput = document.getElementById('btn2');
+				var oUl = document.getElementById('div-ul');
+				var oLi = oUl.getElementsByTagName('li');
+				
+				oInput.onclick = function ()
+				{
+					oUl.style.display = oUl.style.display == 'block'?'none':'block';
+				}
+				oLi[2].onclick = function ()
+				{
+					oUl.style.display='none';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="btn">
+			<input id="btn2" type="button" value="输入法" />
+		</div>
+		<div>
+			<ul id="div-ul">
+				<li><a href="#">五笔</a></li>
+				<li><a href="#">全拼</a></li>
+				<li><a href="#">关闭</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

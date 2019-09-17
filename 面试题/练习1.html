@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//var x = 30; 添加这个
+			function Poin ()
+			{
+				this.x = 20;
+				this.getX = function (){return this.x;}
+			}
+			var a = new Poin();
+			/*
+			 *   在Poin的函数里面给属性getX添加了一个函数的属性值，
+			 * 将getX赋给f之后运行程序，f里函数的this.x就指向全局，
+			 * 在全局中并没有定义x或赋值。
+			 */
+			var f = a.getX;
+			console.log(f());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

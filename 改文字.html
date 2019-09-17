@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>改文字</title>
+		<style>
+			div {
+				width: 300px;
+				height: 200px;
+				margin: 0 auto;
+			}
+			#text {
+				width: 100px;
+				height: 20px;
+			}
+			#btn {
+				width: 100px;
+				height: 30px;
+			}
+		</style>
+		<script>
+				function settxt()
+				{
+					var oText = document.getElementById('text');
+					oText.value = '我是改变后的'
+					
+				}
+				
+		</script>
+	</head>
+	<body>
+		<div>
+			<input id="text" type="text" />
+			<input id="btn" type="button" value="更改文字" onclick="settxt()" />
+		</div>
+	</body>
+</html>

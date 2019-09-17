@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音乐播放列表</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			#star {
+				width: 200px;
+				margin: 0 auto;
+				background: blue;
+			}
+			#star ul li {
+				width: 185px;
+				text-align: left;
+				color: white;
+				font-size: 13px;
+				margin-top: 5px;
+			}
+			ul {
+				display: none;
+			}
+			#star h3 {
+				width: 200px;
+				height: 30px;
+				border: 1px solid #fff;
+				background: pink;
+			}
+		</style>
+		<script>
+			window.onload = function ()
+			{
+				var oH3 = document.getElementsByTagName('h3')[0];
+				var oUl = document.getElementsByTagName('ul')[0];
+				var flag = 1;
+				oH3.onclick = function ()
+				{
+					if(flag==1){
+						oUl.style.display = 'block';
+						flag = 0;
+					}
+					else
+					{
+						oUl.style.display = 'none';
+						flag = 1;
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="star">
+			<h3>播放列表....</h3>
+			<ul>
+				<li>玩家之徒 - 蔡依林</li>
+				<li>原谅我就是这样的女生 - 戴佩妮</li>
+				<li>猜不透 - 丁当</li>
+				<li>自导自演 - 周杰伦</li>
+				<li>浪漫窝 - 弦子</li>
+				<li>流年 - 王菲</li>
+			</ul>
+		</div>
+	</body>
+</html>

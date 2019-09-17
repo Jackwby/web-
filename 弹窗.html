@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#btn {
+				width: 500px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			#outer {
+				width: 500px;
+				margin: 50px auto 0;
+				background: blue;
+				padding: 10px;
+				display:none;
+			}
+			#top {
+				width: 500px;
+				height: 20px;
+				background: pink;
+				margin-bottom: 10px;
+			}
+			#top span {
+				width: 20px;
+				height: 20px;
+				display: block;
+				text-align: center;
+				float: right;
+				background: #fff;
+			}
+			#txt-rea {
+				width: 500px;
+				height: 400px;
+				background: green;
+			}
+		</style>
+		<script>
+			window.onload = function ()
+			{
+				var oBtn = document.getElementsByTagName('input')[0];
+				var oDiv = document.getElementById('outer');
+				var oCls = document.getElementById('top').getElementsByTagName('span')[0];
+				
+				oBtn.onclick = function()
+				{
+					oDiv.style.display = 'block';
+				}
+				oCls.onclick = function ()
+				{
+					oDiv.style.display = 'none';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="btn">
+			<input type="button" value="按钮" />
+		</div>
+		<div id="outer">
+			<div id="top">
+				<span>X</span>
+			</div>
+			<div id="txt-rea">
+			</div>
+		</div>
+	</body>
+</html>

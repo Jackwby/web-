@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>去重</title>
+		<script>
+			var num = [1,2,3,2,2,2,2,2,2,1,3,4,2,5];
+
+					for(i=0; i<num.length; i++)
+					{
+						//将数组遍历一遍 ，num【i】 是当前的元素
+						for(j=i+1; j<num.length; j++)
+						{
+							//进行第二次遍历 ，num【j】是num【i】的后一位元素
+							if(num[i]==num[j])
+							{
+								/*
+								*将num【i】与num【j】对比，如果相等就用splice（）方法
+								* 删除num【j】元素
+								*/
+								num.splice(j,1);
+								/*
+								 * j--是防止数组内有两个相连接的相同元素
+								 * （因为元素删除后，被删除元素的后一位会填补上来，
+								 * 所以需要进行两次对比；j--不能写出if语句外，会导致死循环）
+								 */
+								j--
+							}
+						}
+					}
+			console.log(num);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
